@@ -7,7 +7,7 @@ import java.awt.Point;
 import java.util.Random;
 
 public class Reversi extends JFrame implements ActionListener{
- private static int NUMBER_OF_GAMES = 1;
+ private static int NUMBER_OF_GAMES = 10;
  private static boolean test = true;
  private static final int EXTRA_SPACE = 100;
  private static final int ROWS = 8, COLUMNS = 8;
@@ -88,7 +88,7 @@ public class Reversi extends JFrame implements ActionListener{
 
   //Instantiate new player objects in lines 86 and 87
   playerOne = new minimaxPlayer(COLOR_ONE, "BLACK");
-  playerTwo = new RandomPlayer(COLOR_TWO, "WHITE");
+  playerTwo = new jeff(COLOR_TWO, "WHITE");
 
   if(first_player) {
    player = true;

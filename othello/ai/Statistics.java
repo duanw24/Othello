@@ -28,5 +28,6 @@ public class Statistics {
         } catch (IOException e) {
             return false;
         }
+        return false;
     }
 }

@@ -14,7 +14,7 @@ public class minTest {
     public static double minimaxValue(Board board,int depth,boolean isMax, int alpha, int beta) {
         //eval leaf nodes
         nodes++;
-        if ((depth == 4) || board.isDone()) {
+        if ((depth == 2) || board.isDone()) {
             return heuristic(board);
         }
 
@@ -76,51 +76,6 @@ public class minTest {
     }
 
   public static double heuristic(Board board) {
-        /*
-      int temp=0;
-      int tokencount;
-
-      int[][] value = {
-              {10000,-100,10,5,5,10,-100,10000},
-              {-100,-100,-2,-2,-2,-2,-100,-100},
-              {10,-2,-1,-1,-1,-1,-2,10},
-              {5,-2,-1,-1,-1,-1,-2,5},
-              {5,-2,-1,-1,-1,-1,-2,5},
-              {10,-2,-1,-1,-1,-1,-2,10},
-              {-100,-100,-2,-2,-2,-2,-100,-100},
-              {10000,-100,10,5,5,10,-100,10000}
-      };
-
-      tokencount = 0;
-      for(int i=0;i<board.getRows();i++) {
-          for(int j=0;j<board.getColumns();j++) {
-              if (board.getState(i, j)!=null) {
-                  tokencount++;
-              }
-          }
-      }
-
-      if(tokencount < 59) {
-          for (int i = 0; i < board.getRows(); i++) {
-              for (int j = 0; j < board.getColumns(); j++) {
-                  if (board.getState(i, j) == Color.BLACK) {
-                      temp += value[i][j];
-                      System.out.println(value[i][j] + " value calculated for move" + i + ", " + j);
-                  }
-              }
-          }
-      } else {
-          for (int i = 0; i < board.getRows(); i++) {
-              for (int j = 0; j < board.getColumns(); j++) {
-                  if (board.getState(i, j) == Color.BLACK) {
-                      temp += 100;
-                  }
-              }
-          }
-      }
-
-      return temp;
-*/
         int bFront = 0;
         int wFront = 0;
         int bScore=0;
@@ -308,5 +263,52 @@ public class minTest {
     }
 
  */
+
+
+        /*
+      int temp=0;
+      int tokencount;
+
+      int[][] value = {
+              {10000,-100,10,5,5,10,-100,10000},
+              {-100,-100,-2,-2,-2,-2,-100,-100},
+              {10,-2,-1,-1,-1,-1,-2,10},
+              {5,-2,-1,-1,-1,-1,-2,5},
+              {5,-2,-1,-1,-1,-1,-2,5},
+              {10,-2,-1,-1,-1,-1,-2,10},
+              {-100,-100,-2,-2,-2,-2,-100,-100},
+              {10000,-100,10,5,5,10,-100,10000}
+      };
+
+      tokencount = 0;
+      for(int i=0;i<board.getRows();i++) {
+          for(int j=0;j<board.getColumns();j++) {
+              if (board.getState(i, j)!=null) {
+                  tokencount++;
+              }
+          }
+      }
+
+      if(tokencount < 59) {
+          for (int i = 0; i < board.getRows(); i++) {
+              for (int j = 0; j < board.getColumns(); j++) {
+                  if (board.getState(i, j) == Color.BLACK) {
+                      temp += value[i][j];
+                      System.out.println(value[i][j] + " value calculated for move" + i + ", " + j);
+                  }
+              }
+          }
+      } else {
+          for (int i = 0; i < board.getRows(); i++) {
+              for (int j = 0; j < board.getColumns(); j++) {
+                  if (board.getState(i, j) == Color.BLACK) {
+                      temp += 100;
+                  }
+              }
+          }
+      }
+
+      return temp;
+*/
 
 }
